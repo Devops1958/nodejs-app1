@@ -1,11 +1,14 @@
 pipeline{
-    agent any 
+    
+    agent any
 
     stages{
-        stage('Dep install')
-        step{
-            sh 'npm install'
+        stage('Dep install'){
+            step{
+                sh 'npm install'
+            }
         }
     }
+
 
 }
