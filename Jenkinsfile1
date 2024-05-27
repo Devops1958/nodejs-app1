@@ -1,15 +1,12 @@
 pipeline{
-    
-    agent any
 
+    agent any
     stages{
         stage('Dep install'){
-            agent {docker { image 'node'}}
-            step{
+            agent { docker { image 'node'}}
+            steps{
                 sh 'npm install'
             }
         }
     }
-
-
 }
