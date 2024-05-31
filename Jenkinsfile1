@@ -15,5 +15,8 @@ pipeline{
                 sh 'npm pack'
             }
         }
+        stage('upload artifact'){
+            
+        }
     }
 }
