@@ -23,6 +23,7 @@ pipeline{
                 "http://ec2-34-207-188-175.compute-1.amazonaws.com:8081/artifactory/utc-nodejs/utc-app${BUILD_ID}.tgz"'
             }
         }
+
         stage('docker login'){
             steps{
                 sh 'aws ecr get-login-password --region us-east-1 | \
@@ -30,10 +31,12 @@ pipeline{
                 781382313434.dkr.ecr.us-east-1.amazonaws.com'
             }
         }
-        
-                
+
             }
         }
+        
+                
+        
         
             
     
